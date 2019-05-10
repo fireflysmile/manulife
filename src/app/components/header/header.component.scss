@@ -1,0 +1,13 @@
+@import 'color';
+
+.header-page {
+    height: 80px;
+    background-color: $silver; 
+    .logo {
+        display: block;
+        width: 335px;
+        img { 
+            width: 100%
+        }
+    }  
+}

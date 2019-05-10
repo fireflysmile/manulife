@@ -8,8 +8,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class DashboardComponent implements OnInit {
 
+  badp = [];
+  texts: {};
+
   constructor(
-    private dataService: DataService
+    private dataServices: DataService
   ) { }
 
   ngOnInit() {
@@ -17,11 +20,12 @@ export class DashboardComponent implements OnInit {
   }
 
   onload() {
-    this.dataService.get('dashboard.json').subscribe(
-      (datas: any) => {
-        this.datas = datas;
-      }
-    );
+    this.dataServices.get('dashboard.json').subscribe((datas: any) => {
+      this.badp = datas.badp;
+      this.texts = datas.abc;
+
+      console.log(this.texts)
+    })
   }
 
 }

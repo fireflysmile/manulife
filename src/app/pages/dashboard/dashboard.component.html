@@ -1,3 +1,19 @@
-<p>
-  {{ datas?.data}}
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+      <th>d</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of badp | test">
+      <td>{{ item['Username Abc'] }}</td>
+      <td>{{ item.b }}</td>
+      <td>{{ item.c }}</td>
+      <td>{{ item.d }}</td>
+    </tr>
+  </tbody>
+</table>
+<p>{{ texts?.text }}</p>
