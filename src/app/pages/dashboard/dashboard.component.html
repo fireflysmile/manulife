@@ -1,19 +1,7 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>a</th>
-      <th>b</th>
-      <th>c</th>
-      <th>d</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of badp | test">
-      <td>{{ item['Username Abc'] }}</td>
-      <td>{{ item.b }}</td>
-      <td>{{ item.c }}</td>
-      <td>{{ item.d }}</td>
-    </tr>
-  </tbody>
-</table>
-<p>{{ texts?.text }}</p>
+<app-primary-button [textBtn]="'New Participant'"></app-primary-button>
+<app-primary-button [textBtn]="'New Rotation'"></app-primary-button>
+<app-badp-sedp [badpData]="badpData" (activateJourney)="badpJourney($event)" (activateParticipants)="badpParticipants($event)"></app-badp-sedp>
+<app-badp-sedp [badpData]="sedpData"  (activateJourney)="sedpJourney($event)" (activateParticipants)="sedpParticipants($event)"></app-badp-sedp>
+<app-statistic-program-table [statisticData]="statisticData" (showBADP)="showAboutBADP()"></app-statistic-program-table>
+<app-about-dashboard *ngIf="isShowAboutBADP" [aboutData]="aboutBADP"></app-about-dashboard>
+<app-about-dashboard *ngIf="isShowAboutSEDP" [aboutData]="aboutSEDP"></app-about-dashboard>

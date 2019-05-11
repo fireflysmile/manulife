@@ -1,0 +1,23 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Graduation Year</td>
+        <td>#Hired</td>
+        <td>#Onboard</td>
+        <td>Retention%</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of badpData">
+        <td>{{ data.graduationYear }}</td>
+        <td>{{ data.hired }}</td>
+        <td>{{ data.onboard }}</td>
+        <td>{{ data.retention }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <app-primary-button (click)="onclickJourney()" [textBtn]="'Journey'"></app-primary-button>
+  <app-primary-button (click)="onclickParticipants()" [textBtn]="'Participants'"></app-primary-button>
+</div>
+

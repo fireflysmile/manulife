@@ -1,0 +1,26 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Program</td>
+        <td>Year Created</td>
+        <td>#Hired</td>
+        <td>#Onboard</td>
+        <td>Retention%</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of statisticData">
+        <td>
+          <span *ngFor="let item of data.program">{{ item }}</span>
+        </td>
+        <td>{{ data.yearCreated }}</td>
+        <td>{{ data.hired }}</td>
+        <td>{{ data.onboard }}</td>
+        <td>{{ data.retention }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <app-primary-button (click)="routeToBadp()" [textBtn]="'About BADP'"></app-primary-button>
+  <app-primary-button (click)="routeToSedp()" [textBtn]="'About SEDP'"></app-primary-button>
+</div>

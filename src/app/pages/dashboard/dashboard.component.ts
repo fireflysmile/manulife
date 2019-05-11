@@ -7,9 +7,13 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  badpData: [];
+  sedpData: [];
+  statisticData: [];
+  aboutBADP: [];
+  aboutSEDP: [];
 
-  badp = [];
-  texts: {};
+  isShowAboutBADP = false;
 
   constructor(
     private dataServices: DataService
@@ -21,11 +25,31 @@ export class DashboardComponent implements OnInit {
 
   onload() {
     this.dataServices.get('dashboard.json').subscribe((datas: any) => {
-      this.badp = datas.badp;
-      this.texts = datas.abc;
-
-      console.log(this.texts)
-    })
+      this.badpData = datas.badpData;
+      this.sedpData = datas.sedpData;
+      this.statisticData = datas.statisticData;
+      this.aboutBADP = datas.aboutBADP;
+      this.aboutSEDP = datas.aboutSEDP;
+    });
   }
 
+  badpJourney(value) {
+    // console.log(value);
+  }
+
+  badpParticipants(value) {
+    // console.log(value);
+  }
+
+  sedpJourney(value) {
+    // console.log(value);
+  }
+
+  sedpParticipants(value) {
+    // console.log(value);
+  }
+
+  showAboutBADP() {
+    this.isShowAboutBADP = true;
+  }
 }

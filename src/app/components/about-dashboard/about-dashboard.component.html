@@ -1,0 +1,27 @@
+<div class="modal-dialog modal-dialog-centered">
+  <app-back-button></app-back-button>
+  <h1>{{ aboutData.imageFake }}</h1>
+  <h5>{{ aboutData.subtitle }}</h5>
+  <h4>{{ aboutData.title }}</h4>
+  <p>{{ aboutData.description }}</p>
+  <p>{{ aboutData.statisticTitle }}</p>
+  <table>
+    <thead>
+     <tr>
+        <td>{{ aboutData.statisticNumbers.header1 }}</td>
+        <td>{{ aboutData.statisticNumbers.header2 }}</td>
+        <td>{{ aboutData.statisticNumbers.header3 }}</td>
+        <td>{{ aboutData.statisticNumbers.header4 }}</td>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Year created</td>
+        <td>Number of Hired Member</td>
+        <td>Number of Onboard Member</td>
+        <td>Percent of Retention</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>{{ aboutData.content }}</p>
+</div>
