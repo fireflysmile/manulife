@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon-add</title>
+    <desc>Created with Sketch.</desc>
+    <g id="01.desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02.d.BADPParticipants-admin-addparticipant" transform="translate(-317.000000, -307.000000)" fill="#FF7769" fill-rule="nonzero">
+            <g id="modal-details">
+                <g id="table-row-participant" transform="translate(127.000000, 192.000000)">
+                    <g id="left-user-detail">
+                        <g id="photo">
+                            <g id="add-user" transform="translate(139.000000, 64.000000)">
+                                <g id="icon-add" transform="translate(49.000000, 49.000000)">
+                                    <polygon id="+" points="8.11570248 2 11.9173554 2 11.9173554 8.23123732 18 8.23123732 18 11.7687627 11.9173554 11.7687627 11.9173554 18 8.11570248 18 8.11570248 11.7687627 2 11.7687627 2 8.23123732 8.11570248 8.23123732"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

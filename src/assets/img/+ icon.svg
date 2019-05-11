@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>+ icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="01.desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.2b.dashboard-admin-addparticipant" transform="translate(-760.000000, -607.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="modal-details">
+                <g id="button-with-+" transform="translate(744.000000, 595.000000)">
+                    <polygon id="+-icon" points="22.1157025 12 25.9173554 12 25.9173554 18.2312373 32 18.2312373 32 21.7687627 25.9173554 21.7687627 25.9173554 28 22.1157025 28 22.1157025 21.7687627 16 21.7687627 16 18.2312373 22.1157025 18.2312373"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

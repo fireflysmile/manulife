@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./statistic-program-table.component.scss']
 })
 export class StatisticProgramTableComponent implements OnInit {
-  @Input() statisticData;
+  @Input() programStatistic;
   @Output() showBADP = new EventEmitter;
   @Output() showSEDP = new EventEmitter;
 

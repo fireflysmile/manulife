@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./badp-sedp.component.scss']
 })
 export class BadpSedpComponent implements OnInit {
-  @Input() badpData;
+  @Input() specificData;
   @Output() activateJourney = new EventEmitter();
   @Output() activateParticipants = new EventEmitter();
   constructor() {}

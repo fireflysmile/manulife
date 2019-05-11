@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon-info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="01.desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="04.a.BADPRotationJourneys" transform="translate(-538.000000, -366.000000)" stroke="#282B3E">
+            <g id="table" transform="translate(88.000000, 272.000000)">
+                <g id="table-participant" transform="translate(0.000000, 63.000000)">
+                    <g id="table-row-participant">
+                        <g id="icon-info" transform="translate(450.000000, 31.000000)">
+                            <path d="M0.5,17.1169048 L4.86150802,14.5 L16.5988486,14.5 L16.5988486,0.5 L0.5,0.5 L0.5,17.1169048 Z" id="Path-2"></path>
+                            <path d="M9.04942428,6 L9.04942428,12" id="Line-3" stroke-width="2"></path>
+                            <path d="M9.04942428,3 L9.04942428,5" id="Line-3-Copy" stroke-width="2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

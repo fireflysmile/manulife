@@ -1,4 +1,8 @@
-<div>
+<div class="data-table">
+  <div class="data-table-header">
+    <span>{{specificData.nameTable}}</span>
+    <span>{{specificData.dataOfDate}}</span>
+  </div>
   <table class="table">
     <thead>
       <tr>
@@ -9,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of badpData">
+      <tr *ngFor="let data of specificData.contentTable">
         <td>{{ data.graduationYear }}</td>
         <td>{{ data.hired }}</td>
         <td>{{ data.onboard }}</td>

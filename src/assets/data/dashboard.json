@@ -1,71 +1,81 @@
 {
-  "badpData" : [
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    },
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    },
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    },
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    },
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    }
-  ],
+  "badpData" : {
+    "nameTable": "BADP",
+    "dataOfDate": "Data as of Feb 2019",
+    "contentTable":  [
+      {
+        "graduationYear": 2019,
+        "hired": 5,
+        "onboard": 4,
+        "retention": "20%"
+      },
+      {
+        "graduationYear": 2018,
+        "hired": 5,
+        "onboard": 4,
+        "retention": "0%"
+      },
+      {
+        "graduationYear": 2017,
+        "hired": 4,
+        "onboard": 2,
+        "retention": "30%"
+      },
+      {
+        "graduationYear": 2016,
+        "hired": 6,
+        "onboard": 5,
+        "retention": "0%"
+      },
+      {
+        "graduationYear": 2015,
+        "hired": 5,
+        "onboard": 4,
+        "retention": "20%"
+      }
 
-  "sedpData" : [
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    },
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    },
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    },
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    },
-    {
-      "graduationYear": 2019,
-      "hired": 5,
-      "onboard": 4,
-      "retention": "20%"
-    }
-  ],
+    ]
+  },
 
-  "statisticData" : [
+  "sedpData" : {
+    "nameTable": "SEDP",
+    "dataOfDate": "Data as of Feb 2019",
+    "contentTable":  [
+      {
+        "graduationYear": 2019,
+        "hired": 5,
+        "onboard": 4,
+        "retention": "20%"
+      },
+      {
+        "graduationYear": 2018,
+        "hired": 5,
+        "onboard": 4,
+        "retention": "20%"
+      },
+      {
+        "graduationYear": 2017,
+        "hired": 5,
+        "onboard": 4,
+        "retention": "20%"
+      },
+      {
+        "graduationYear": 2016,
+        "hired": 5,
+        "onboard": 4,
+        "retention": "20%"
+      },
+      {
+        "graduationYear": 2015,
+        "hired": 5,
+        "onboard": 4,
+        "retention": "20%"
+      }
+
+    ]
+  },
+
+  "programStatistic" : [
     {
       "program": ["BADP", "Business Analyst Development Program"],
       "yearCreated": 2010,

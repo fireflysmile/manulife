@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="21px" viewBox="0 0 30 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>burger menu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="02.tablet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="T-01.1a.dashboard" transform="translate(-25.000000, -30.000000)" fill="#282B3E">
+            <g id="header">
+                <path d="M25,30 L55,30 L55,33 L25,33 L25,30 Z M25,39 L55,39 L55,42 L25,42 L25,39 Z M25,48 L55,48 L55,51 L25,51 L25,48 Z" id="burger-menu"></path>
+            </g>
+        </g>
+    </g>
+</svg>

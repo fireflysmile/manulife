@@ -9,7 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 export class DashboardComponent implements OnInit {
   badpData: [];
   sedpData: [];
-  statisticData: [];
+  programStatistic: [];
   aboutBADP: {};
   aboutSEDP: {};
   addRotation: {};
@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
     this.dataServices.get('dashboard.json').subscribe((datas: any) => {
       this.badpData = datas.badpData;
       this.sedpData = datas.sedpData;
-      this.statisticData = datas.statisticData;
+      this.programStatistic = datas.programStatistic;
       this.aboutBADP = datas.aboutBADP;
       this.aboutSEDP = datas.aboutSEDP;
       this.addRotation = datas.addRotation;
