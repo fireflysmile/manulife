@@ -59,4 +59,8 @@ export class BADPParticipantsComponent implements OnInit {
   closeModalAddParticipant() {
     this.isOpenModalAddParticipant = false;
   }
+
+  forceCloseParticipantModal() {
+    this.isOpenParticipantModal = false
+  }
 }

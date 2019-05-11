@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 declare const $;
 
@@ -14,6 +14,7 @@ export class ParticipantDetailComponent implements OnInit {
       id: 'id1',
       year: 2019,
       rotation: 'Thornton',
+      rotation_status: 'active',
       manager: 'Mdo',
       note: 'Notes about participant’s experience in the role. In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.',
     },
@@ -21,14 +22,30 @@ export class ParticipantDetailComponent implements OnInit {
       id: 'id2',
       year: 2019,
       rotation: 'Thornton',
+      rotation_status: 'pending',
+      manager: 'Mdo',
+      note: 'Notes about participant’s experience in the role. In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.',
+    },
+    {
+      id: 'id3',
+      year: 2019,
+      rotation: 'Thornton',
+      rotation_status: 'blocked',
       manager: 'Mdo',
       note: 'Notes about participant’s experience in the role. In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.',
     }
   ]
 
+  stylesRotationStatus = {
+    'active': { color: '#00A758' },
+    'pending': { color: '#0000C1' },
+    'blocked': { color: 'red' },
+  } 
+
   showRotationsHistoryNote = []
 
   @Input() participant: object;
+  @Output() forceClose = new EventEmitter();
 
   constructor() { }
 

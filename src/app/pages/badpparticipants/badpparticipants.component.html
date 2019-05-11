@@ -54,9 +54,6 @@
     </div>
 </div>
 
-isOpenParticipantModal: {{isOpenParticipantModal}}
-isOpenModalAddParticipant: {{isOpenModalAddParticipant}}
-
 <app-modal
     [modalClassName]="'participant-modal'"
     [isOpen]="isOpenParticipantModal"
@@ -70,5 +67,5 @@ isOpenModalAddParticipant: {{isOpenModalAddParticipant}}
     [isOpen]="isOpenModalAddParticipant"
     (afterCloseModal)="closeModalAddParticipant()"
 >
-    <app-add-participant></app-add-participant>
+    <app-add-participant (forceClose)="forceCloseParticipantModal()"></app-add-participant>
 </app-modal>

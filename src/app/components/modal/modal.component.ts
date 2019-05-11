@@ -30,9 +30,17 @@ export class ModalComponent implements OnInit {
     $(`#${this.uniqueId}`).modal("show")
   }
 
+  closeModal() {
+    $("#myModal").modal("hide")
+  }
+
   ngOnChanges(changes) {
     if (changes.isOpen.currentValue && changes.isOpen.currentValue !== changes.isOpen.previousValue) {
       this.showModal()
+    }
+
+    if (!changes.isOpen.currentValue && changes.isOpen.currentValue !== changes.isOpen.previousValue) {
+      this.closeModal()
     }
   }
 }
