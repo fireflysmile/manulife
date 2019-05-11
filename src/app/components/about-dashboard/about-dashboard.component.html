@@ -1,5 +1,5 @@
-<div class="modal-dialog modal-dialog-centered">
-  <app-back-button></app-back-button>
+<div>
+  <app-back-button (click)="closeAboutModal()"></app-back-button>
   <h1>{{ aboutData.imageFake }}</h1>
   <h5>{{ aboutData.subtitle }}</h5>
   <h4>{{ aboutData.title }}</h4>

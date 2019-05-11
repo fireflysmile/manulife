@@ -2,6 +2,6 @@
 <app-primary-button [textBtn]="'New Rotation'"></app-primary-button>
 <app-badp-sedp [badpData]="badpData" (activateJourney)="badpJourney($event)" (activateParticipants)="badpParticipants($event)"></app-badp-sedp>
 <app-badp-sedp [badpData]="sedpData"  (activateJourney)="sedpJourney($event)" (activateParticipants)="sedpParticipants($event)"></app-badp-sedp>
-<app-statistic-program-table [statisticData]="statisticData" (showBADP)="showAboutBADP()"></app-statistic-program-table>
-<app-about-dashboard *ngIf="isShowAboutBADP" [aboutData]="aboutBADP"></app-about-dashboard>
-<app-about-dashboard *ngIf="isShowAboutSEDP" [aboutData]="aboutSEDP"></app-about-dashboard>
+<app-statistic-program-table [statisticData]="statisticData" (showBADP)="showAboutBADP()" (showSEDP)="showAboutSEDP()"></app-statistic-program-table>
+<app-about-dashboard *ngIf="isShowAboutBADP" [aboutData]="aboutBADP" (hideAboutModal)="backToStatistic()"></app-about-dashboard>
+<app-about-dashboard *ngIf="isShowAboutSEDP" [aboutData]="aboutSEDP" (hideAboutModal)="backToStatistic()"></app-about-dashboard>

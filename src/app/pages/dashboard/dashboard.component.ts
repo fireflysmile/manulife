@@ -10,10 +10,12 @@ export class DashboardComponent implements OnInit {
   badpData: [];
   sedpData: [];
   statisticData: [];
-  aboutBADP: [];
-  aboutSEDP: [];
+  aboutBADP: {};
+  aboutSEDP: {};
+  addRotation: {};
 
   isShowAboutBADP = false;
+  isShowAboutSEDP = false;
 
   constructor(
     private dataServices: DataService
@@ -30,6 +32,7 @@ export class DashboardComponent implements OnInit {
       this.statisticData = datas.statisticData;
       this.aboutBADP = datas.aboutBADP;
       this.aboutSEDP = datas.aboutSEDP;
+      this.addRotation = datas.addRotation;
     });
   }
 
@@ -51,5 +54,14 @@ export class DashboardComponent implements OnInit {
 
   showAboutBADP() {
     this.isShowAboutBADP = true;
+  }
+
+  showAboutSEDP() {
+    this.isShowAboutSEDP = true;
+  }
+
+  backToStatistic() {
+    this.isShowAboutBADP = false;
+    this.isShowAboutSEDP = false;
   }
 }

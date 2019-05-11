@@ -14,8 +14,6 @@ import { PrimaryButtonComponent } from './components/primary-button/primary-butt
 import { StatisticProgramTableComponent } from './components/statistic-program-table/statistic-program-table.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { AboutDashboardComponent } from './components/about-dashboard/about-dashboard.component';
-import { AddParticipantComponent } from './components/add-participant/add-participant.component';
-import { AddRotationComponent } from './components/add-rotation/add-rotation.component';
 import { SecondaryButtonComponent } from './components/secondary-button/secondary-button.component';
 
 @NgModule({
@@ -30,8 +28,6 @@ import { SecondaryButtonComponent } from './components/secondary-button/secondar
     StatisticProgramTableComponent,
     BackButtonComponent,
     AboutDashboardComponent,
-    AddParticipantComponent,
-    AddRotationComponent,
     SecondaryButtonComponent
   ],
   imports: [

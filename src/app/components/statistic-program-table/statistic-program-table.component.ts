@@ -16,11 +16,11 @@ export class StatisticProgramTableComponent implements OnInit {
   ngOnInit() {
   }
 
-  routeToBadp() {
+  showAboutBadp() {
     this.showBADP.emit();
   }
 
-  routeToSedp() {
+  showAboutSedp() {
     this.showSEDP.emit();
   }
 }
