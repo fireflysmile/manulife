@@ -9,6 +9,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TestPipe } from './pipes/test.pipe';
+import { ModalComponent } from './components/modal/modal.component';
 
 import { BADPParticipantsComponent } from './pages/badpparticipants/badpparticipants.component';
 
@@ -21,7 +22,8 @@ import bootstrap from 'bootstrap';
     FooterComponent,
     DashboardComponent,
     TestPipe,
-    BADPParticipantsComponent
+    BADPParticipantsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
