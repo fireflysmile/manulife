@@ -11,9 +11,23 @@ export class BADPParticipantsComponent implements OnInit {
   isOpenParticipantModal = false;
   participant = {};
 
+  isAdmin = true;
+
+  isOpenModalAddParticipant = false;
+
+  listOptions = []
+
+  optionSelected = null;
+
   constructor(
     private dataServices: DataService
-  ) { }
+  ) {
+    this.listOptions = Array.from({ length: 5 }, (_, index) => ({
+      value: 2019 - index,
+      label: 2019 - index
+    }))
+    this.optionSelected = this.listOptions[0];
+  }
 
   ngOnInit() {
     this.onload();
@@ -32,5 +46,17 @@ export class BADPParticipantsComponent implements OnInit {
 
   afterCloseParticipantModal() {
     this.isOpenParticipantModal = false
+  }
+
+  handleSelectOption({ selected }) {
+    this.optionSelected = selected;
+  }
+
+  showModalAddParticipant() {
+    this.isOpenModalAddParticipant = true;
+  }
+
+  closeModalAddParticipant() {
+    this.isOpenModalAddParticipant = false;
   }
 }

@@ -11,10 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { TestPipe } from './pipes/test.pipe';
 import { ModalComponent } from './components/modal/modal.component';
 
-import { BADPParticipantsComponent } from './pages/badpparticipants/badpparticipants.component';
 
 import bootstrap from 'bootstrap';
+import { BADPParticipantsComponent } from './pages/badpparticipants/badpparticipants.component';
 import { ParticipantDetailComponent } from './pages/badpparticipants/participant-detail/participant-detail.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { AddParticipantComponent } from './pages/badpparticipants/add-participant/add-participant.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { ParticipantDetailComponent } from './pages/badpparticipants/participant
     DashboardComponent,
     TestPipe,
     BADPParticipantsComponent,
+    ParticipantDetailComponent,
+    DropdownComponent,
     ModalComponent,
-    ParticipantDetailComponent
+    AddParticipantComponent,
   ],
   imports: [
     BrowserModule,

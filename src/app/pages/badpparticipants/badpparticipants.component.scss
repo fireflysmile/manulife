@@ -1,27 +1,3 @@
-.caret {
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  transition: all .3s;
-
-  &--dark {
-    border-color: #000;
-  }
-
-  &--down {
-    transform: translateY(-25%) rotate(45deg);
-  }
-
-  &--up {
-    transform: rotate(-135deg);
-  }
-
-  &--left {
-    transform: rotate(135deg);
-  }
-}
-
 .back-to {
   align-items: center;
   display: flex;
@@ -55,14 +31,26 @@
   }
 
   &__select {
+    align-items: center;
+    display: flex;
     margin-left: 88px;
-    margin-top: 56px;
+    margin-top: 40px;
   }
 
   &__select-text {
     color: #fff;
-    font-size: 40px;
+    font-size: 36px;
     margin: 0;
+  }
+
+  &__select-option {
+    margin-left: 33px;
+    width: 120px;
+  }
+
+  ::ng-deep &__dropdown-name {
+    font-size: 40px;
+    padding: 0 !important;
   }
 }
 
@@ -85,6 +73,10 @@
 
 .content {
   padding: 32px 88px 0 88px;
+
+  &-content-admin {
+    padding-top: 0;
+  }
 }
 
 .participant-table {
@@ -133,11 +125,20 @@
 
 ::ng-deep .participant-modal {
   .modal-dialog {
-      max-width: 80vw !important;
-      .modal-body {
-          padding: 0;
-      }
-  
+    max-width: 80vw !important;
+
+    .modal-body {
+      padding: 0;
+    }
   }
-  
+}
+
+::ng-deep .add-participant-modal {
+  .modal-dialog {
+    width: 1024px;
+
+    .modal-body {
+      padding: 0;
+    }
+  }
 }
