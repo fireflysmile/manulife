@@ -7,6 +7,9 @@ declare const $;
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+  
+
+  @Input() modalClassName: string;
   @Input() isOpen: boolean;
   @Output() afterCloseModal = new EventEmitter();
 

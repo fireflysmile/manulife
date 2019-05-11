@@ -21,3 +21,30 @@
     transform: rotate(135deg);
   }
 }
+
+
+
+.btn {
+
+  &-bittersweet {
+    background: #FF7769;
+    color: #fff;
+  }
+
+  &-transperant {
+    background: transparent;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer;
+  }
+}
+
+.alnright {
+  text-align: right;
+}
+
+table {
+  td {
+    word-break: break-word;
+  }
+}

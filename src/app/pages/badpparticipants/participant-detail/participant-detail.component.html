@@ -1,0 +1,66 @@
+<div>
+  <div class="participant-container">
+    <div class="participant-detail">
+      <div class="participant-detail__cover-photo">
+        <img src="http://i.pravatar.cc/300" alt="">
+      </div>
+      <div class="participant-detail__info">
+        <div>
+          <h1>John McKinney</h1>
+        </div>
+        <div>
+          <input type="text" value="JMcKinney@yahoo.com">
+        </div>
+        <div>
+          <input type="text" value="2019">
+        </div>
+        <div>
+          <input type="text" value="BADP">
+        </div>
+      </div>
+    </div>
+    <div class="member-rotations-history">
+      <div class="member-rotations-history__heading">
+        <h1>Member Rotations History</h1>
+      </div>
+      <div class="member-rotations-history__table">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col" style="width: 16.66%">Year</th>
+              <th scope="col">Rotation</th>
+              <th scope="col">Manager</th>
+              <th scope="col" class="alnright">
+                <button class="btn-transperant" (click)="toggleAllRotationHistoryRow()">
+                    <span [ngClass]="[
+                    'caret', 'caret--dark',
+                    isShowAllNotes ? 'caret--up' : 'caret--down'
+                  ]"></span>
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let history of rotationsHistory">
+            <tr>
+              <td>{{ history.year }}</td>
+              <td>{{ history.rotation }}</td>
+              <td>{{ history.manager }}</td>
+              <td class="alnright">
+                <button class="btn-transperant" (click)="toggleRotationHistoryRow(history.id)">
+                  <span [ngClass]="[
+                    'caret', 'caret--dark',
+                    isShowNoteById(history.id) ? 'caret--up' : 'caret--down'
+                  ]"></span>
+                </button>
+              </td>
+            </tr>
+            <tr *ngIf="isShowNoteById(history.id)">
+              <td></td>
+              <td colspan="3">{{ history.note }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

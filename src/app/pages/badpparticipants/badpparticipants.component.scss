@@ -77,13 +77,6 @@
   }
 }
 
-.btn {
-  &-bittersweet {
-    background: #FF7769;
-    color: #fff;
-  }
-}
-
 .action {
   display: flex;
   justify-content: flex-end;
@@ -135,4 +128,16 @@
     object-fit: cover;
     width: 60px;
   }
+}
+
+
+::ng-deep .participant-modal {
+  .modal-dialog {
+      max-width: 80vw !important;
+      .modal-body {
+          padding: 0;
+      }
+  
+  }
+  
 }

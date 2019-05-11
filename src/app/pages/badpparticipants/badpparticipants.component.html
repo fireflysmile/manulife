@@ -28,7 +28,8 @@
                 </tr>
             </thead>
             <tbody class="participant-table__tbody">
-                <tr class="participant-table__row" *ngFor="let participant of datas">
+                <tr class="participant-table__row" *ngFor="let participant of datas"
+                    (click)="showParticipantModal(participant)">
                     <td>
                         <div class="participant-table__name">
                             <img class="participant-table__avatar" src="{{participant.avatar}}" />
@@ -43,3 +44,8 @@
         </table>
     </div>
 </div>
+
+<app-modal [modalClassName]="'participant-modal'" [isOpen]="isOpenParticipantModal"
+    (afterCloseModal)="afterCloseParticipantModal()">
+    <app-participant-detail [participant]="participant"></app-participant-detail>
+</app-modal>

@@ -1,0 +1,37 @@
+.participant-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.participant-detail {
+    flex-basis: 27.3%;
+    &__cover-photo {
+        height: 200px;
+        overflow: hidden
+        // img {
+            
+        // }
+    }
+
+    &__detail {
+        padding: 24px;
+    }
+}
+
+.member-rotations-history {
+    flex-basis: 100%;
+
+    &__heading {
+        padding: 54px 49px 20px 49px;
+        h1 {
+            font-size: 30px;
+            color: #34384B;
+        }
+    }
+
+    &__table {
+        table {
+            table-layout: fixed;
+        }
+    }
+}

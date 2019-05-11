@@ -8,6 +8,8 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class BADPParticipantsComponent implements OnInit {
   datas = [];
+  isOpenParticipantModal = false;
+  participant = {};
 
   constructor(
     private dataServices: DataService
@@ -21,5 +23,14 @@ export class BADPParticipantsComponent implements OnInit {
     this.dataServices.get('badp-participants.json').subscribe((datas: any) => {
       this.datas = datas;
     })
+  }
+
+  showParticipantModal(participant) {
+    this.isOpenParticipantModal = true
+    this.participant = participant
+  }
+
+  afterCloseParticipantModal() {
+    this.isOpenParticipantModal = false
   }
 }

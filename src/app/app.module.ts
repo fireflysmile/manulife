@@ -14,6 +14,7 @@ import { ModalComponent } from './components/modal/modal.component';
 import { BADPParticipantsComponent } from './pages/badpparticipants/badpparticipants.component';
 
 import bootstrap from 'bootstrap';
+import { ParticipantDetailComponent } from './pages/badpparticipants/participant-detail/participant-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import bootstrap from 'bootstrap';
     DashboardComponent,
     TestPipe,
     BADPParticipantsComponent,
-    ModalComponent
+    ModalComponent,
+    ParticipantDetailComponent
   ],
   imports: [
     BrowserModule,
