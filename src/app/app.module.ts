@@ -10,13 +10,18 @@ import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TestPipe } from './pipes/test.pipe';
 
+import { BADPParticipantsComponent } from './pages/badpparticipants/badpparticipants.component';
+
+import bootstrap from 'bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    TestPipe
+    TestPipe,
+    BADPParticipantsComponent
   ],
   imports: [
     BrowserModule,
