@@ -47,5 +47,5 @@
 
 <app-modal [modalClassName]="'participant-modal'" [isOpen]="isOpenParticipantModal"
     (afterCloseModal)="afterCloseParticipantModal()">
-    <app-participant-detail [participant]="participant"></app-participant-detail>
+    <app-participant-detail [participant]="participant" (forceClose)="forceCloseParticipantModal()"></app-participant-detail>
 </app-modal>

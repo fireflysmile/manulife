@@ -33,4 +33,8 @@ export class BADPParticipantsComponent implements OnInit {
   afterCloseParticipantModal() {
     this.isOpenParticipantModal = false
   }
+
+  forceCloseParticipantModal() {
+    this.isOpenParticipantModal = false
+  }
 }
