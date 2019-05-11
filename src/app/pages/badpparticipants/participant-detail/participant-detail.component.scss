@@ -33,5 +33,29 @@
         table {
             table-layout: fixed;
         }
+
+        &-head, .history-note-row td {
+            background-color: #EDEDED;
+            border-color: #EDEDED;
+        }
+
+        tr th:first-child, tr td:first-child {
+            padding-left: 49px;
+        }
+        tr th:last-child, tr td:last-child {
+            padding-right: 49px;
+        }
+    }
+
+
+
+    &__expanding {
+        transition: all .3s;  
+        transform: rotate(-180deg);
+    }
+
+    &__collapsing {
+        transition: all .3s;
+        transform: rotate(0deg);
     }
 }

@@ -25,17 +25,16 @@
       </div>
       <div class="member-rotations-history__table">
         <table class="table">
-          <thead class="thead-dark">
+          <thead class="member-rotations-history__table-head">
             <tr>
-              <th scope="col" style="width: 16.66%">Year</th>
+              <th scope="col" style="width: 22%">Year</th>
               <th scope="col">Rotation</th>
               <th scope="col">Manager</th>
               <th scope="col" class="alnright">
                 <button class="btn-transperant" (click)="toggleAllRotationHistoryRow()">
-                    <span [ngClass]="[
-                    'caret', 'caret--dark',
-                    isShowAllNotes ? 'caret--up' : 'caret--down'
-                  ]"></span>
+                    <img src="/assets/img/expand-all-icon.svg" [ngClass]="[
+                    isShowAllNotes ? 'member-rotations-history__expanding' : 'member-rotations-history__collapsing'
+                  ]" />
                 </button>
               </th>
             </tr>
@@ -43,7 +42,7 @@
           <tbody *ngFor="let history of rotationsHistory">
             <tr>
               <td>{{ history.year }}</td>
-              <td>{{ history.rotation }}</td>
+            <td><span [ngStyle]="stylesRotationStatus[history.rotation_status]" >{{ history.rotation }}</span></td>
               <td>{{ history.manager }}</td>
               <td class="alnright">
                 <button class="btn-transperant" (click)="toggleRotationHistoryRow(history.id)">
@@ -54,7 +53,7 @@
                 </button>
               </td>
             </tr>
-            <tr *ngIf="isShowNoteById(history.id)">
+            <tr class="history-note-row" *ngIf="isShowNoteById(history.id)">
               <td></td>
               <td colspan="3">{{ history.note }}</td>
             </tr>
