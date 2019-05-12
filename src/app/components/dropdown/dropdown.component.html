@@ -1,0 +1,27 @@
+<div class="dropdown" [ngClass]="{
+    'dropdown-transparent': transparent,
+    'dropdown-light': light
+}">
+    <button
+        class="btn btn-secondary dropdown-toggle"
+        [ngClass]="[dropdownClassName]"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+    >
+      <span class="dropdown-value">{{selected.label}}</span>
+      <span class="caret caret--down dropdown-caret"></span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div
+            *ngFor="let item of options"
+            (click)="handleSelectOption(item)"
+            class="dropdown-item"
+            [ngClass]="{
+                'dropdown-item-active': item.value === selected.value
+            }"
+        >{{item.label}}</div>
+    </div>
+</div>

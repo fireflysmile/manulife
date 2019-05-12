@@ -7,23 +7,27 @@ declare const $;
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-  
+  uniqueId: string;
 
   @Input() modalClassName: string;
   @Input() isOpen: boolean;
   @Output() afterCloseModal = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+    this.uniqueId = Math.random().toString(16).slice(2);
+  }
 
-  ngOnInit() {
-    $('#myModal').on('hidden.bs.modal', () => {
+  ngOnInit() {}
+
+  ngAfterViewInit() {
+    $(`#${this.uniqueId}`).on('hidden.bs.modal', () => {
       this.isOpen = false;
       this.afterCloseModal.emit()
     })
   }
 
   showModal() {
-    $("#myModal").modal("show")
+    $(`#${this.uniqueId}`).modal("show")
   }
 
   closeModal() {

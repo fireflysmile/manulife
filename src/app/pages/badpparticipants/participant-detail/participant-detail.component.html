@@ -30,7 +30,7 @@
               <th scope="col" style="width: 22%">Year</th>
               <th scope="col">Rotation</th>
               <th scope="col">Manager</th>
-              <th scope="col" class="alnright">
+              <th scope="col" class="text-right">
                 <button class="btn-transperant" (click)="toggleAllRotationHistoryRow()">
                     <img src="/assets/img/expand-all-icon.svg" [ngClass]="[
                     isShowAllNotes ? 'member-rotations-history__expanding' : 'member-rotations-history__collapsing'
@@ -44,7 +44,7 @@
               <td>{{ history.year }}</td>
             <td><span [ngStyle]="stylesRotationStatus[history.rotation_status]" >{{ history.rotation }}</span></td>
               <td>{{ history.manager }}</td>
-              <td class="alnright">
+              <td class="text-right">
                 <button class="btn-transperant" (click)="toggleRotationHistoryRow(history.id)">
                   <span [ngClass]="[
                     'caret', 'caret--dark',

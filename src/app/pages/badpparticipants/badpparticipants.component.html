@@ -9,15 +9,24 @@
 
         <div class="header__select">
             <h1 class="header__select-text">BADP Participants Class of</h1>
-            <!-- <select class="select"></select> -->
+            <div class="header__select-option">
+                <app-dropdown
+                    [transparent]="'true'"
+                    [light]="'true'"
+                    [dropdownClassName]="'header__dropdown-name'"
+                    [options]="listOptions"
+                    [value]="optionSelected"
+                    (onValueChange)="handleSelectOption($event)"
+                ></app-dropdown>
+            </div>
         </div>
     </div>
 
-    <div class="action">
-        <button class="btn btn-bittersweet">New Participant</button>
+    <div class="action" *ngIf="isAdmin">
+        <button class="btn btn-bittersweet btn-not-round" (click)="showModalAddParticipant()">New Participant</button>
     </div>
 
-    <div class="content">
+    <div class="content" [ngClass]="{ 'content-admin': isAdmin }">
         <table class="table custom-table participant-table">
             <thead class="participant-table__thead">
                 <tr>
@@ -45,7 +54,18 @@
     </div>
 </div>
 
-<app-modal [modalClassName]="'participant-modal'" [isOpen]="isOpenParticipantModal"
-    (afterCloseModal)="afterCloseParticipantModal()">
-    <app-participant-detail [participant]="participant" (forceClose)="forceCloseParticipantModal()"></app-participant-detail>
+<app-modal
+    [modalClassName]="'participant-modal'"
+    [isOpen]="isOpenParticipantModal"
+    (afterCloseModal)="afterCloseParticipantModal()"
+>
+    <app-participant-detail [participant]="participant"></app-participant-detail>
+</app-modal>
+
+<app-modal
+    [modalClassName]="'add-participant-modal'"
+    [isOpen]="isOpenModalAddParticipant"
+    (afterCloseModal)="closeModalAddParticipant()"
+>
+    <app-add-participant (forceClose)="forceCloseParticipantModal()"></app-add-participant>
 </app-modal>
