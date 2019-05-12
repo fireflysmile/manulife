@@ -1,3 +1,7 @@
 .add-participant {
-  
+  display: flex;
+
+  &__left {
+    width: 350px;
+  }
 }

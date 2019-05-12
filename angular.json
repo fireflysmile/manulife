@@ -34,7 +34,6 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/scss/reset.scss",
-              "src/assets/scss/global.scss",
               "src/styles.scss"
             ],
             "scripts": [
