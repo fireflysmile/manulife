@@ -22,6 +22,21 @@
         &-head {
             background-color: #EDEDED;
             border-color: #EDEDED;
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        &-body  {
+            display: block;
+            height: 400px;
+            overflow: auto;
+        
+            tr {
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+            }
         }
 
         .history-note-row td {
@@ -35,9 +50,10 @@
         tr th:last-child, tr td:last-child {
             padding-right: 49px;
         }
+
+        
+        
     }
-
-
 
     &__expanding {
         transition: all .3s;  
@@ -47,5 +63,37 @@
     &__collapsing {
         transition: all .3s;
         transform: rotate(0deg);
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 15px 49px;
+        height: 52px;
+
+        &__button {
+            button {
+                &:disabled {
+                    img {
+                        filter: grayscale(1);
+                    }
+                }
+            }
+        }
+
+        &__left {
+            flex-basis: 50%;
+            button {
+                margin-right: 17px
+            }
+        }
+        &__right {
+            flex-basis: 50%;
+            text-align: right;
+            button {
+                margin-left: 17px
+            }
+        }
     }
 }

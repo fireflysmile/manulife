@@ -150,6 +150,7 @@
 
 ::ng-deep .participant-detail {
   flex-basis: 350px;
+  overflow: hidden;
   flex-shrink: 0;
   &__cover-photo {
       height: 200px;
@@ -168,6 +169,7 @@
       background-color: #0000C1;
       padding-bottom: 14px;
       padding-top: 22px;
+      height: 100%;
 
       &__fullname {
           font-size: 40px;

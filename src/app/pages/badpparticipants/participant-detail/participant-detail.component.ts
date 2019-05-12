@@ -40,9 +40,11 @@ export class ParticipantDetailComponent implements OnInit {
     'active': { color: '#00A758' },
     'pending': { color: '#0000C1' },
     'blocked': { color: 'red' },
-  } 
+  }
 
   showRotationsHistoryNote = []
+
+  editMode = false;
 
   @Input() participant: object;
   @Output() forceClose = new EventEmitter();
@@ -75,4 +77,15 @@ export class ParticipantDetailComponent implements OnInit {
     }
   }
 
+  onClickEdit() {
+    this.editMode = true;
+  }
+
+  onClickCancel() {
+    this.editMode = false;
+  }
+
+  onClickSave() {
+    this.editMode = false;
+  }
 }
