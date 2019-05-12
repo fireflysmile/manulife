@@ -16,6 +16,22 @@
     &__detail {
         padding: 24px;
     }
+
+    &__info {
+        background-color: #0000C1;
+        > div {
+            padding: 24px;
+        }
+
+        &--fullname {
+            font-size: 44px;
+        }
+
+        &--fullname, input {
+            color: white;
+            background: transparent;
+        }
+    }
 }
 
 .member-rotations-history {
@@ -34,9 +50,14 @@
             table-layout: fixed;
         }
 
-        &-head, .history-note-row td {
+        &-head {
             background-color: #EDEDED;
             border-color: #EDEDED;
+        }
+
+        .history-note-row td {
+            background-color: #F5F5F5;
+            border-color: #F5F5F5;
         }
 
         tr th:first-child, tr td:first-child {
