@@ -63,7 +63,11 @@
     [isOpen]="isOpenParticipantModal"
     (afterCloseModal)="afterCloseParticipantModal()"
 >
-    <app-participant-detail [participant]="participant"></app-participant-detail>
+    <app-participant-detail
+        [participant]="participant"
+        (showDeleteParticipantModal)="showDeleteParticipantModal()"
+        (showSaveModal)="showSaveParticipantModal()"
+    ></app-participant-detail>
 </app-modal>
 
 <app-modal
@@ -72,4 +76,33 @@
     (afterCloseModal)="closeModalAddParticipant()"
 >
     <app-add-participant (forceClose)="forceCloseParticipantModal()"></app-add-participant>
+</app-modal>
+
+<app-modal
+    [modalClassName]="'delete-participant-modal'"
+    [isOpen]="isOpenDeleteParticipantModal"
+    (afterCloseModal)="closeDeleteParticipantModal()"
+>
+    <div class="common-modal">
+        <p class="title">Delete Participant</p>
+        <p class="description">Are you sure you want to delete this participant?</p>
+        <div class="control">
+            <button (click)="closeDeleteParticipantModal()" class="btn btn-bittersweet-reverse">Cancel</button>
+            <button class="btn btn-bittersweet">Delete</button>
+        </div>
+    </div>
+</app-modal>
+
+<app-modal
+    [modalClassName]="'save-participant-modal'"
+    [isOpen]="isOpenSaveParticipantModal"
+    (afterCloseModal)="closeSaveParticipantModal()"
+>
+    <div class="common-modal">
+        <p class="title">Save Participant</p>
+        <p class="description">Your edit to this participant information have been updated succesfully.</p>
+        <div class="control">
+            <button (click)="closeSaveParticipantModal()" class="btn btn-bittersweet-reverse">Close</button>
+        </div>
+    </div>
 </app-modal>

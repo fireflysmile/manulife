@@ -20,10 +20,17 @@ export class ModalComponent implements OnInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    $(`#${this.uniqueId}`).on('hidden.bs.modal', () => {
+    $(`#${this.uniqueId}`).on('hidden.bs.modal', (e) => {
+      e.stopPropagation();
+      console.log(e.target, `#${this.uniqueId}`, e.target.id)
       this.isOpen = false;
-      this.afterCloseModal.emit()
-    })
+      this.afterCloseModal.emit();
+      console.log('this.afterCloseModal.emit()')
+    });
+
+    if (this.isOpen) {
+      this.showModal();
+    }
   }
 
   showModal() {
@@ -31,7 +38,7 @@ export class ModalComponent implements OnInit {
   }
 
   closeModal() {
-    $("#myModal").modal("hide")
+    $(`#${this.uniqueId}`).modal("hide")
   }
 
   ngOnChanges(changes) {

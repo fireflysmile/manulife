@@ -28,7 +28,7 @@
     </div>
     <div class="member-rotations-history__table">
       <div class="custom-table custom-table--default participant-table">
-        <div class="custom-table__thead">
+        <div class="custom-table__thead member-rotations-history__table-head">
           <div class="custom-table__col member-rotations-history__table-first-col">Year</div>
           <div class="custom-table__col">Rotation</div>
           <div class="custom-table__col">Manager</div>
@@ -40,7 +40,7 @@
             </button>
           </div>
         </div>
-        <perfect-scrollbar style="max-height: 400px;" (psYReachStart)="onScrollEvent($event)">
+        <perfect-scrollbar style="max-height: 400px;">
           <div class="custom-table__tbody member-rotations-history__table-body">
             <ng-container *ngFor="let history of rotationsHistory">
               <div class="custom-table__row custom-table__row--center member-rotations-history__table-row">
@@ -94,7 +94,7 @@
           <button (click)="onClickEdit()" class="btn-transperant" [disabled]="editMode"><img
               src="/assets/img/icon-pencil-edit.svg" alt=""></button>
           <button class="btn-transperant" [disabled]="editMode"><img src="/assets/img/icon-add.svg" alt=""></button>
-          <button class="btn-transperant" [disabled]="editMode"><img src="/assets/img/icon-trash.svg" alt=""></button>
+          <button (click)="onClickDelete()" class="btn-transperant" [disabled]="editMode"><img src="/assets/img/icon-trash.svg" alt=""></button>
         </div>
       </div>
     </div>

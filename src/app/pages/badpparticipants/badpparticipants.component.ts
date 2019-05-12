@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 
+declare const $;
+
 @Component({
   selector: 'app-badpparticipants',
   templateUrl: './badpparticipants.component.html',
@@ -14,6 +16,8 @@ export class BADPParticipantsComponent implements OnInit {
   isAdmin = true;
 
   isOpenModalAddParticipant = false;
+  isOpenDeleteParticipantModal = false;
+  isOpenSaveParticipantModal = false;
 
   listOptions = []
 
@@ -44,8 +48,26 @@ export class BADPParticipantsComponent implements OnInit {
     this.participant = participant
   }
 
+  showDeleteParticipantModal() {
+    this.isOpenDeleteParticipantModal = true
+  }
+
+  showSaveParticipantModal() {
+    this.isOpenSaveParticipantModal = true
+  }
+
   afterCloseParticipantModal() {
     this.isOpenParticipantModal = false
+  }
+
+  closeDeleteParticipantModal() {
+    this.isOpenDeleteParticipantModal = false
+    $("body").addClass("modal-open")
+  }
+
+  closeSaveParticipantModal() {
+    this.isOpenSaveParticipantModal = false
+    $("body").addClass("modal-open")
   }
 
   handleSelectOption({ selected }) {
@@ -60,6 +82,7 @@ export class BADPParticipantsComponent implements OnInit {
     this.isOpenModalAddParticipant = false;
   }
 
+  
   forceCloseParticipantModal() {
     this.isOpenParticipantModal = false
   }

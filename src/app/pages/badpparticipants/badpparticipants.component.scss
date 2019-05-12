@@ -116,6 +116,35 @@
   }
 }
 
+::ng-deep .modal {
+  .common-modal {
+    padding: 20px;
+
+    .title {
+      font-size: 30px;
+    }
+  
+    .description {
+      font-size: 16px;
+    }
+  
+    .control {
+      margin-top: 50px;
+      > button:not(:last-child) {
+        margin-right: 15px;
+      } 
+    }
+  }
+  
+}
+
+::ng-deep .delete-participant-modal,
+::ng-deep .save-participant-modal {
+  .modal-dialog {
+    top: 20%;
+  }
+}
+
 ::ng-deep .add-participant-modal {
   .modal-dialog {
     max-width: 1024px !important;

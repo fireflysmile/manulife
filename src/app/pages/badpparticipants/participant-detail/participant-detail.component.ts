@@ -44,7 +44,6 @@ export class ParticipantDetailComponent implements OnInit {
 
   showRotationsHistoryNote = []
 
-  editMode = false;
 
   yearOptions = [
     {
@@ -76,9 +75,13 @@ export class ParticipantDetailComponent implements OnInit {
     },
   ]
 
+  editMode = false;
+
   @Input() participant: object;
   @Output() forceClose = new EventEmitter();
-
+  @Output() showDeleteParticipantModal = new EventEmitter();
+  @Output() showSaveModal = new EventEmitter();
+  
   constructor() { }
 
   ngOnInit() {
@@ -111,12 +114,17 @@ export class ParticipantDetailComponent implements OnInit {
     this.editMode = true;
   }
 
+  onClickDelete() {
+    this.showDeleteParticipantModal.emit()
+  }
+
   onClickCancel() {
     this.editMode = false;
   }
 
   onClickSave() {
     this.editMode = false;
+    this.showSaveModal.emit();
   }
 
   getRotationHistoryById(id) {
