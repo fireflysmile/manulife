@@ -1,27 +1,36 @@
-<div>
-  <app-back-button (click)="closeAboutModal()"></app-back-button>
-  <h1>{{ aboutData.imageFake }}</h1>
-  <h5>{{ aboutData.subtitle }}</h5>
-  <h4>{{ aboutData.title }}</h4>
-  <p>{{ aboutData.description }}</p>
-  <p>{{ aboutData.statisticTitle }}</p>
-  <table>
-    <thead>
-     <tr>
-        <td>{{ aboutData.statisticNumbers.header1 }}</td>
-        <td>{{ aboutData.statisticNumbers.header2 }}</td>
-        <td>{{ aboutData.statisticNumbers.header3 }}</td>
-        <td>{{ aboutData.statisticNumbers.header4 }}</td>
-     </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Year created</td>
-        <td>Number of Hired Member</td>
-        <td>Number of Onboard Member</td>
-        <td>Percent of Retention</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>{{ aboutData.content }}</p>
+<div class="About-modal">
+   <!-- <div><img src="{{aboutData.imageSrc}}" /></div> -->
+  <div class="About-modal-background"><img src="../../../assets/img/flower.jpeg" alt="getty-image"/></div>
+  <div class="About-modal-content">
+    <!-- <app-back-button (click)="closeAboutModal()"></app-back-button> -->
+    <div class="back-to" (click)="closeAboutModal()">
+        <div class="back-to__caret">
+            <div class="caret caret--left"></div>
+        </div>
+        <div class="back-to__text">Back</div>
+    </div>
+    <h5 class="About-modal-content__subtitle">{{ aboutData.subtitle }}</h5>
+    <h3 class="About-modal-content__title">{{ aboutData.title }}</h3>
+    <p class="About-modal-content__snippet">{{ aboutData.description }}</p>
+    <p class="About-modal-content__title-table">{{ aboutData.statisticTitle }}</p>
+    <table class="About-modal-content__table">
+      <thead>
+        <tr>
+          <td>{{ aboutData.statisticNumbers.year }}</td>
+          <td>{{ aboutData.statisticNumbers.hiredMember }}</td>
+          <td>{{ aboutData.statisticNumbers.onBoardMember }}</td>
+          <td>{{ aboutData.statisticNumbers.retention }}</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Year created</td>
+          <td>Number of Hired Member</td>
+          <td>Number of Onboard Member</td>
+          <td>Percent of Retention</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="About-modal-content__snippet">{{ aboutData.content }}</p>
+  </div>
 </div>

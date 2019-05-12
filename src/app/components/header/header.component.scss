@@ -6,7 +6,7 @@
   justify-content: space-between;
   height: 80px;
   background-color: #fafafa;
-  padding: 13px 40px 11px 25px;
+  padding: 0 40px 0 25px;
 
   &-content {
     display: flex;
@@ -24,6 +24,16 @@
         display: block;
         width: 100%;
       }
+    }
+  }
+
+  .logo {
+    display: block;
+    margin: 10px 50px 0 33px;
+    width: 335px;
+
+    img {
+        width: 100%
     }
   }
 
@@ -69,16 +79,5 @@
       display: inline-block;
       vertical-align: middle;
     }
-  }
-
-  .logo {
-      display: block;
-      margin-left: 33px;
-      margin-right: 50px;
-      width: 335px;
-
-      img {
-          width: 100%
-      }
   }
 }

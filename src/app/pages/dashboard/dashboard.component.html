@@ -1,23 +1,36 @@
 <div class="dashboard">
-  <div class="row group-add-btn">
+  <div class="dashboard-panel">
+    <div class="dashboard-panel-content">
+      <p>Dashboard</p>
+      <p>
+        <span>Business Analyst Development Program </span>
+        <span>Software Engineering Development Program</span>
+      </p>
+    </div>
+  </div>
+  <div class="group-add-btn">
       <app-primary-button class="add-btn" [textBtn]="'New Participant'"></app-primary-button>
       <app-primary-button class="add-btn" [textBtn]="'New Rotation'"></app-primary-button>
   </div>
-  <div class="row">
-    <div class="col-lg-6 badp-table">
-        <app-badp-sedp [specificData]="badpData" (activateJourney)="badpJourney($event)" (activateParticipants)="badpParticipants($event)"></app-badp-sedp>
+  <div class="dashboard-group-table">
+    <div class="badp-table">
+        <app-badp-sedp *ngIf="badpData" [specificData]="badpData" (activateJourney)="badpJourney($event)" (activateParticipants)="badpParticipants($event)"></app-badp-sedp>
       </div>
-      <div class="col-lg-6 sedp-table">
-        <app-badp-sedp [specificData]="sedpData"  (activateJourney)="sedpJourney($event)" (activateParticipants)="sedpParticipants($event)"></app-badp-sedp>
+      <div class="sedp-table">
+        <app-badp-sedp *ngIf="sedpData" [specificData]="sedpData"  (activateJourney)="sedpJourney($event)" (activateParticipants)="sedpParticipants($event)"></app-badp-sedp>
       </div>
     </div>
-  <div class="row">
-    <div class="col-lg-12">
-        <app-statistic-program-table [programStatistic]="programStatistic" (showBADP)="showAboutBADP()" (showSEDP)="showAboutSEDP()"></app-statistic-program-table>
-    </div>
+  <div class="dashboard-statistic-table">
+    <app-statistic-program-table *ngIf="programStatistic" [programStatistic]="programStatistic" (showBADP)="showAboutBADP()" (showSEDP)="showAboutSEDP()"></app-statistic-program-table>
   </div>
   <div>
-    <app-about-dashboard *ngIf="isShowAboutBADP" [aboutData]="aboutBADP" (hideAboutModal)="backToStatistic()"></app-about-dashboard>
-    <app-about-dashboard *ngIf="isShowAboutSEDP" [aboutData]="aboutSEDP" (hideAboutModal)="backToStatistic()"></app-about-dashboard>
+    <app-modal
+      [isOpen]="isShowAboutBADP"
+      (afterCloseModal)="closeAboutBADP()">
+      <app-about-dashboard *ngIf="aboutBADP" [aboutData]="aboutBADP" (hideAboutModal)="backToStatistic()"></app-about-dashboard>
+    </app-modal>
+    <!-- <app-modal *ngIf="isShowAboutSEDP">
+      <app-about-dashboard [aboutData]="aboutSEDP" (hideAboutModal)="backToStatistic()"></app-about-dashboard>
+    </app-modal> -->
   </div>
 </div>

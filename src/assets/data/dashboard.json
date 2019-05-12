@@ -100,10 +100,10 @@
     "statisticTitle": "BADP in Numbers",
     "statisticNumbers":
       {
-        "header1": 2010,
-        "header2": 5,
-        "header3": 4,
-        "header4": "20%"
+        "year": 2010,
+        "hiredMember": 5,
+        "onBoardMember": 4,
+        "retention": "20%"
       },
     "content": "Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel"
   },
@@ -116,10 +116,10 @@
     "statisticTitle": "BADP in Numbers",
     "statisticNumbers":
       {
-        "header1": 2010,
-        "header2": 5,
-        "header3": 4,
-        "header4": "20%"
+        "year": 2010,
+        "hiredMember": 5,
+        "onBoardMember": 4,
+        "retention": "20%"
       },
     "content": "Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel"
   }

@@ -33,6 +33,7 @@ export class DashboardComponent implements OnInit {
       this.aboutBADP = datas.aboutBADP;
       this.aboutSEDP = datas.aboutSEDP;
       this.addRotation = datas.addRotation;
+      console.log(this.badpData)
     });
   }
 
@@ -54,6 +55,10 @@ export class DashboardComponent implements OnInit {
 
   showAboutBADP() {
     this.isShowAboutBADP = true;
+  }
+
+  closeAboutBADP() {
+    this.isShowAboutBADP = false;
   }
 
   showAboutSEDP() {
