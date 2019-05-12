@@ -8,8 +8,8 @@ declare const $;
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent implements OnInit {
-  @Input('value') selected: string;
-  @Input() dropdownClassName: string;
+  @Input('value') selected;
+  @Input() dropdownClassName = "";
   @Input() options: Array<any>;
   @Input() transparent = false;
   @Input() light = false;

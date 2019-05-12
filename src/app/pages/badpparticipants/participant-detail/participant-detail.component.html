@@ -30,7 +30,7 @@
       <table class="table">
         <thead class="member-rotations-history__table-head">
           <tr>
-            <th scope="col" style="width: 22%">Year</th>
+            <th scope="col">Year</th>
             <th scope="col">Rotation</th>
             <th scope="col">Manager</th>
             <th scope="col" class="text-right">
@@ -45,8 +45,18 @@
         <tbody class="member-rotations-history__table-body">
           <ng-container *ngFor="let history of rotationsHistory">
             <tr>
-              <td style="width: 22%">{{ history.year }}</td>
-              <td><span [ngStyle]="stylesRotationStatus[history.rotation_status]">{{ history.rotation }}</span></td>
+              <td>
+                <span *ngIf="!editMode">{{ history.year }}</span>
+                <app-dropdown *ngIf="editMode" [options]="yearOptions" [value]="getSelected(history.id)('year')"
+                  (onValueChange)="onChangeSelect(history.id)('year')($event)"></app-dropdown>
+              </td>
+              <td>
+                <span *ngIf="!editMode" [ngStyle]="stylesRotationStatus[history.rotation_status]">
+                  {{ history.rotation }}
+                </span>
+                <app-dropdown *ngIf="editMode" [options]="roationOptions" [value]="getSelected(history.id)('rotation')"
+                  (onValueChange)="onChangeSelect(history.id)('rotation')($event)"></app-dropdown>
+              </td>
               <td>{{ history.manager }}</td>
               <td class="text-right">
                 <button class="btn-transperant" (click)="toggleRotationHistoryRow(history.id)">
@@ -58,8 +68,13 @@
               </td>
             </tr>
             <tr class="history-note-row" *ngIf="isShowNoteById(history.id)">
-              <td></td>
-              <td colspan="3">{{ history.note }}</td>
+              <td colspan="1"></td>
+              <td colspan="3">
+                <span *ngIf="!editMode">{{ history.note }}</span>
+                <div  *ngIf="editMode" class="form-group">
+                  <textarea class="form-control rounded-0" rows="5">{{ history.note }}</textarea>
+                </div>
+              </td>
             </tr>
           </ng-container>
         </tbody>
