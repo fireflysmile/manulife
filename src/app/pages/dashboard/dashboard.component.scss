@@ -1,4 +1,13 @@
 .dashboard {
+  width: 100%;
+  .group-add-btn {
+    padding: 20px 40px 16px 40px;
+    justify-content: flex-end;
+
+    .add-btn {
+      margin-left: 20px;
+    }
+  }
   .badp-table {
     padding-left: 40px;
     padding-right: 20px;

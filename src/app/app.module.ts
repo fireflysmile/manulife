@@ -15,6 +15,14 @@ import { StatisticProgramTableComponent } from './components/statistic-program-t
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { AboutDashboardComponent } from './components/about-dashboard/about-dashboard.component';
 import { SecondaryButtonComponent } from './components/secondary-button/secondary-button.component';
+import { ModalComponent } from './components/modal/modal.component';
+
+
+import bootstrap from 'bootstrap';
+import { BADPParticipantsComponent } from './pages/badpparticipants/badpparticipants.component';
+import { ParticipantDetailComponent } from './pages/badpparticipants/participant-detail/participant-detail.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { AddParticipantComponent } from './pages/badpparticipants/add-participant/add-participant.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +36,12 @@ import { SecondaryButtonComponent } from './components/secondary-button/secondar
     StatisticProgramTableComponent,
     BackButtonComponent,
     AboutDashboardComponent,
-    SecondaryButtonComponent
+    SecondaryButtonComponent,
+    BADPParticipantsComponent,
+    ParticipantDetailComponent,
+    DropdownComponent,
+    ModalComponent,
+    AddParticipantComponent,
   ],
   imports: [
     BrowserModule,

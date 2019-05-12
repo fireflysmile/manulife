@@ -50,6 +50,27 @@
     }
   }
 
+  &-profile {
+    align-self: center;
+
+    .avatar {
+      margin-right: 10px;
+      height: 40px;
+      width: 40px;
+
+      img {
+        border-radius: 20px;
+        height: 40px;
+        width: 100%;
+      }
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
   .logo {
       display: block;
       margin-left: 33px;

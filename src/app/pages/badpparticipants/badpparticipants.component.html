@@ -1,0 +1,75 @@
+<div class="badp-participant">
+    <div class="header">
+        <div class="container">
+            <div class="header__back-to back-to">
+                <div class="back-to__caret header__back-to__caret">
+                    <div class="caret caret--left"></div>
+                </div>
+                <div class="back-to__text">Back to Dashboard</div>
+            </div>
+
+            <div class="header__select">
+                <h1 class="header__select-text">BADP Participants Class of</h1>
+                <div class="header__select-option">
+                    <app-dropdown
+                        [transparent]="'true'"
+                        [light]="'true'"
+                        [dropdownClassName]="'header__dropdown-name'"
+                        [options]="listOptions"
+                        [value]="optionSelected"
+                        (onValueChange)="handleSelectOption($event)"
+                    ></app-dropdown>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="action" *ngIf="isAdmin">
+        <button class="btn btn-bittersweet btn-not-round" (click)="showModalAddParticipant()">New Participant</button>
+    </div>
+
+    <div class="content" [ngClass]="{ 'content-admin': isAdmin }">
+        <div class="container">
+            <table class="table custom-table participant-table">
+                <thead class="participant-table__thead">
+                    <tr>
+                        <th class="text-center">Name</th>
+                        <th>Email</th>
+                        <th>Current Rotation</th>
+                        <th>Manager</th>
+                    </tr>
+                </thead>
+                <tbody class="participant-table__tbody">
+                    <tr class="participant-table__row" *ngFor="let participant of datas"
+                        (click)="showParticipantModal(participant)">
+                        <td>
+                            <div class="participant-table__name">
+                                <img class="participant-table__avatar" src="{{participant.avatar}}" />
+                                <span>{{participant.name}}</span>
+                            </div>
+                        </td>
+                        <td>{{participant.email}}</td>
+                        <td>{{participant.rotation}}</td>
+                        <td>{{participant.manager}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<app-modal
+    [modalClassName]="'participant-modal'"
+    [isOpen]="isOpenParticipantModal"
+    (afterCloseModal)="afterCloseParticipantModal()"
+>
+    <app-participant-detail [participant]="participant"></app-participant-detail>
+</app-modal>
+
+<app-modal
+    [modalClassName]="'add-participant-modal'"
+    [isOpen]="isOpenModalAddParticipant"
+    (afterCloseModal)="closeModalAddParticipant()"
+>
+    <app-add-participant (forceClose)="forceCloseParticipantModal()"></app-add-participant>
+</app-modal>

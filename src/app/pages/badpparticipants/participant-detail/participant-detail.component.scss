@@ -1,0 +1,51 @@
+.participant-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.member-rotations-history {
+    flex-basis: 100%;
+
+    &__heading {
+        padding: 54px 49px 20px 49px;
+        h1 {
+            font-size: 30px;
+            color: #34384B;
+        }
+    }
+
+    &__table {
+        table {
+            table-layout: fixed;
+        }
+
+        &-head {
+            background-color: #EDEDED;
+            border-color: #EDEDED;
+        }
+
+        .history-note-row td {
+            background-color: #F5F5F5;
+            border-color: #F5F5F5;
+        }
+
+        tr th:first-child, tr td:first-child {
+            padding-left: 49px;
+        }
+        tr th:last-child, tr td:last-child {
+            padding-right: 49px;
+        }
+    }
+
+
+
+    &__expanding {
+        transition: all .3s;  
+        transform: rotate(-180deg);
+    }
+
+    &__collapsing {
+        transition: all .3s;
+        transform: rotate(0deg);
+    }
+}
