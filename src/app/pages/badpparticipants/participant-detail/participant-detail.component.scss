@@ -1,6 +1,11 @@
 .participant-container {
     display: flex;
     flex-direction: row;
+
+    .participant-detail {
+        width: 350px;
+        flex-shrink: 0;
+    }
 }
 
 .member-rotations-history {
@@ -29,7 +34,7 @@
 
         &-body  {
             display: block;
-            height: 400px;
+            height: 350px;
             overflow: auto;
         
             tr {

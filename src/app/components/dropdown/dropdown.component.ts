@@ -12,7 +12,7 @@ export class DropdownComponent implements OnInit {
   @Input() dropdownClassName: string = '';
   @Input() dropdownCaretClassName: string = '';
   @Input() options: Array<any>;
-  @Input() variant = 'light';
+  @Input() variant = '';
   @Output() onValueChange = new EventEmitter();
 
   isShowDropdown = false;
