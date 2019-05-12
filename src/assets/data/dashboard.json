@@ -2,7 +2,7 @@
   "badpData" : {
     "nameTable": "BADP",
     "dataOfDate": "Data as of Feb 2019",
-    "contentTable":  [
+    "contentTable": [
       {
         "graduationYear": 2019,
         "hired": 5,
@@ -40,7 +40,7 @@
   "sedpData" : {
     "nameTable": "SEDP",
     "dataOfDate": "Data as of Feb 2019",
-    "contentTable":  [
+    "contentTable": [
       {
         "graduationYear": 2019,
         "hired": 5,

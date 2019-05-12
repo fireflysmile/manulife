@@ -1,0 +1,58 @@
+.data-table{
+
+  &-header {
+    background-color: #0000C1;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    padding: 17px 19px 16px 30px;
+
+    span {
+      color: #fff;
+      font-size: 30px;
+    }
+  }
+
+  &-footer {
+    background-color: #ececee;
+    display: flex;
+    height: 80px;
+    padding: 17px 46px;
+
+    .data-table-btn {
+      align-self: center;
+      margin-right: 14px;
+    }
+  }
+
+
+  .table {
+    &>thead>tr>td,
+    &>tbody>tr>td {
+      color: #34384B ;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    &>thead {
+      height: 60px;
+      &>tr>td:first-child {
+        padding-left: 80px;
+        text-align: left;
+      }
+    }
+
+    &>tbody>tr>td {
+      height:64px;
+    }
+
+    &>tbody>tr>.program-name-field {
+      text-align: left;
+
+      span {
+        display: block;
+        margin-left: 94px;
+      }
+    }
+  }
+}

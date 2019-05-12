@@ -1,13 +1,63 @@
 @import 'color';
 
 .header-page {
-    height: 80px;
-    background-color: $silver; 
-    .logo {
+  background-color: $silver;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #fafafa;
+  padding: 13px 40px 11px 25px;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    .menu-btn {
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      height: 21px;
+      padding: 0;
+      width: 30px;
+
+      img {
         display: block;
-        width: 335px;
-        img { 
-            width: 100%
-        }
-    }  
+        width: 100%;
+      }
+    }
+  }
+
+  &-title {
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      height: 40px;
+      left: -17px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid #c7c7c7;
+    }
+    span {
+      display: block;
+
+      &:first-child {
+        font-size: 20px;
+      }
+      &:last-child {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .logo {
+      display: block;
+      margin-left: 33px;
+      margin-right: 50px;
+      width: 335px;
+
+      img {
+          width: 100%
+      }
+  }
 }

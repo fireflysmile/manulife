@@ -21,9 +21,26 @@
     }
   }
 
+  &-footer {
+    background-color: #ececee;
+    display: flex;
+    height: 80px;
+    padding: 20px 6px;
+
+    .data-table-btn {
+      align-self: center;
+      margin-right: 20px;
+      &:first-child {
+        margin-left: auto;
+      }
+    }
+  }
+
   .table {
     &>thead>tr>td,
     &>tbody>tr>td {
+      color: #34384B ;
+      font-size: 16px;
       text-align: center;
     }
     &>thead {

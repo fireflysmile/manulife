@@ -1,4 +1,7 @@
-<div>
+<div class="data-table">
+  <div class="data-table-header">
+    <span>Program Statistics</span>
+  </div>
   <table class="table">
     <thead>
       <tr>
@@ -11,7 +14,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let data of programStatistic">
-        <td>
+        <td class="program-name-field">
           <span *ngFor="let item of data.program">{{ item }}</span>
         </td>
         <td>{{ data.yearCreated }}</td>
@@ -21,6 +24,8 @@
       </tr>
     </tbody>
   </table>
-  <app-primary-button (click)="showAboutBadp()" [textBtn]="'About BADP'"></app-primary-button>
-  <app-primary-button (click)="showAboutSedp()" [textBtn]="'About SEDP'"></app-primary-button>
+  <div class="data-table-footer">
+    <app-primary-button class="data-table-btn" (click)="showAboutBadp()" [textBtn]="'About BADP'"></app-primary-button>
+    <app-primary-button class="data-table-btn" (click)="showAboutSedp()" [textBtn]="'About SEDP'"></app-primary-button>
+  </div>
 </div>
