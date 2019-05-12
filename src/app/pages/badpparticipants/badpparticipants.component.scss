@@ -141,6 +141,7 @@
 ::ng-deep .add-participant-modal {
   .modal-dialog {
     max-width: 1024px !important;
+    padding-bottom: 50px;
 
     .modal-body {
       padding: 0;
@@ -149,38 +150,36 @@
 }
 
 ::ng-deep .participant-detail {
-  flex-basis: 350px;
-  flex-shrink: 0;
+  display: block;
+  width: 100%;
+
   &__cover-photo {
-      height: 200px;
-      overflow: hidden;
-      img {
-          width: 100%;
-          height: auto;   
-      }
+    height: 200px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
   }
 
   &__detail {
-      padding: 24px;
+    padding: 24px;
   }
 
   &__info {
-      background-color: #0000C1;
-      padding-bottom: 14px;
-      padding-top: 22px;
+    background-color: #0000C1;
+    padding-bottom: 14px;
+    padding-top: 22px;
 
-      &__fullname {
-          font-size: 40px;
-          font-weight: 100;
-      }
+    &__fullname {
+      font-size: 40px;
+      font-weight: 100;
+    }
 
-      .my-form-group {
-          label {
-              color: #9B9B9B;
-          }
-          input {
-              color: white;
-          }
-      }
+    &__select-caret {
+      margin-right: 8px;
+    }
   }
 }

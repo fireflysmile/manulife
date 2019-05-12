@@ -9,10 +9,10 @@ declare const $;
 })
 export class DropdownComponent implements OnInit {
   @Input('value') selected: string;
-  @Input() dropdownClassName: string;
+  @Input() dropdownClassName: string = '';
+  @Input() dropdownCaretClassName: string = '';
   @Input() options: Array<any>;
-  @Input() transparent = false;
-  @Input() light = false;
+  @Input() variant = 'light';
   @Output() onValueChange = new EventEmitter();
 
   isShowDropdown = false;
@@ -20,6 +20,18 @@ export class DropdownComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+
+  get transparent() {
+    return this.variant.split(',').map(val => val.trim()).includes('transparent');
+  }
+
+  get light() {
+    return this.variant.split(',').map(val => val.trim()).includes('light');
+  }
+
+  get gainsboro() {
+    return this.variant.split(',').map(val => val.trim()).includes('gainsboro');
+  }
 
   toggleDropdown() {
     $('#dropdownMenuButton').toggle('dropdown');

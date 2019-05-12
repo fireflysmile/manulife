@@ -1,9 +1,31 @@
 <div class="add-participant">
-    <div class="add-participant__left">
-        <div class="add-participant__avatar">
-            
+    <div class="add-participant__left participant-detail">
+        <div class="participant-detail__cover-photo">
+            <img src="http://i.pravatar.cc/600" alt="">
         </div>
-        <div class="add-participant__infor"></div>
+        <div class="participant-detail__info">
+            <div class="form-group my-form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" class="form-control" id="fullname">
+            </div>
+            <div class="form-group my-form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group my-form-group">
+                <label for="class-year">Class Year</label>
+                <input type="text" class="form-control" id="class-year">
+            </div>
+            <div class="form-group my-form-group">
+                <app-dropdown
+                    [variant]="'gainsboro'"
+                    [dropdownCaretClassName]="'participant-detail__info__select-caret'"
+                    [options]="listProgram"
+                    [value]="optionSelected"
+                    (onValueChange)="handleSelectOption($event)"
+                ></app-dropdown>
+            </div>
+        </div>
     </div>
     <div class="add-participant__right"></div>
 </div>

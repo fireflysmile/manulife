@@ -21,6 +21,20 @@
     }
   }
 
+  &-gainsboro {
+    border-bottom: 2px solid #9B9B9B;
+    border-radius: 0px;
+
+    #{$block}-toggle {
+      background: rgba(216, 216, 216, 0.1) !important;
+      color: #fff;
+    }
+
+    #{$block}-caret {
+      border-color: #fff;
+    }
+  }
+
   &-toggle {
     align-items: center;
     background: #F5F5F5;

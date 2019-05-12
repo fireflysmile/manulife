@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddParticipantComponent implements OnInit {
 
+  listProgram = [
+    { value: 'badp', label: 'BADP' },
+    { value: 'sedp', label: 'SEDP' },
+  ]
+
+  optionSelected = this.listProgram[0];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  handleSelectOption({ selected }) {
+    this.optionSelected = selected;
+  }
 }

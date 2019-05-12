@@ -1,6 +1,7 @@
 <div class="dropdown" [ngClass]="{
     'dropdown-transparent': transparent,
-    'dropdown-light': light
+    'dropdown-light': light,
+    'dropdown-gainsboro': gainsboro
 }">
     <button
         class="btn btn-secondary dropdown-toggle"
@@ -12,7 +13,7 @@
         aria-expanded="false"
     >
       <span class="dropdown-value">{{selected.label}}</span>
-      <span class="caret caret--down dropdown-caret"></span>
+      <span [ngClass]="[dropdownCaretClassName]" class="caret caret--down dropdown-caret"></span>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <div
