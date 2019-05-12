@@ -1,8 +1,9 @@
 <div class="participant-container">
   <div class="participant-detail">
-    <div class="participant-detail__cover-photo">
+    <label class="participant-detail__cover-photo">
+      <input type="file" [disabled]="!editMode" />
       <img src="http://i.pravatar.cc/600" alt="">
-    </div>
+    </label>
     <div class="participant-detail__info">
       <div class="form-group my-form-group">
         <input type="text" class="form-control participant-detail__info__fullname" [disabled]="!editMode" id="email"
