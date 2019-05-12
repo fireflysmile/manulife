@@ -99,7 +99,6 @@
   &__row {
     border-bottom: 1px solid #E6E6E6;
     display: flex;
-    overflow: hidden;
     width: 100%;
 
     &:hover {
@@ -114,7 +113,6 @@
   &__col {
     flex-basis: 1px;
     flex-grow: 1;
-    overflow: hidden;
     padding: 10px;
 
     &--3 {

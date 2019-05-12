@@ -41,19 +41,20 @@
           </div>
         </div>
         <perfect-scrollbar style="max-height: 400px;" (psYReachStart)="onScrollEvent($event)">
-          <div class="custom-table__tbody">
+          <div class="custom-table__tbody member-rotations-history__table-body">
             <ng-container *ngFor="let history of rotationsHistory">
               <div class="custom-table__row custom-table__row--center member-rotations-history__table-row">
                 <div class="member-rotations-history__table-first-col custom-table__col">
                   <span *ngIf="!editMode">{{ history.year }}</span>
-                  <app-dropdown [variant]="'transparent'" *ngIf="editMode" [options]="yearOptions" [value]="getSelected(history.id)('year')"
+                  <app-dropdown [variant]="'transparent, dark'" *ngIf="editMode" [options]="yearOptions"
+                    [value]="getSelected(history.id)('year')"
                     (onValueChange)="onChangeSelect(history.id)('year')($event)"></app-dropdown>
                 </div>
                 <div class="custom-table__col">
                   <span *ngIf="!editMode" [ngStyle]="stylesRotationStatus[history.rotation_status]">
                     {{ history.rotation }}
                   </span>
-                  <app-dropdown [variant]="'transparent'" *ngIf="editMode" [options]="roationOptions"
+                  <app-dropdown [variant]="'transparent, dark'" *ngIf="editMode" [options]="roationOptions"
                     [value]="getSelected(history.id)('rotation')"
                     (onValueChange)="onChangeSelect(history.id)('rotation')($event)"></app-dropdown>
                 </div>

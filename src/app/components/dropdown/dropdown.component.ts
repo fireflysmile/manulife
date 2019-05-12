@@ -33,6 +33,10 @@ export class DropdownComponent implements OnInit {
     return this.variant.split(',').map(val => val.trim()).includes('gainsboro');
   }
 
+  get dark() {
+    return this.variant.split(',').map(val => val.trim()).includes('dark');
+  }
+
   toggleDropdown() {
     $('#dropdownMenuButton').toggle('dropdown');
   }

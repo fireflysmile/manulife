@@ -21,6 +21,18 @@
     }
   }
 
+  &-dark {
+    border-color: #000;
+
+    #{$block}-toggle {
+      color: #000;
+    }
+
+    #{$block}-caret {
+      border-color: #000;
+    }
+  }
+
   &-gainsboro {
     border-bottom: 2px solid #9B9B9B;
     border-radius: 0px;

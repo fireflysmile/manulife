@@ -33,15 +33,9 @@
         }
 
         &-body  {
-            display: block;
+            // display: block;
             height: 350px;
-            overflow: auto;
-        
-            tr {
-                display: table;
-                table-layout: fixed;
-                width: 100%;
-            }
+            // overflow: auto;
         }
 
         &-first-col {
