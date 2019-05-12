@@ -13,7 +13,7 @@ export class ParticipantDetailComponent implements OnInit {
     {
       id: 'id1',
       year: 2011,
-      rotation: 'roationOptions1',
+      rotation: 'RT 1',
       rotation_status: 'active',
       manager: 'Mdo',
       note: 'Notes about participant’s experience in the role. In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.',
@@ -21,7 +21,7 @@ export class ParticipantDetailComponent implements OnInit {
     {
       id: 'id2',
       year: 2011,
-      rotation: 'roationOptions1',
+      rotation: 'RT 1',
       rotation_status: 'pending',
       manager: 'Mdo',
       note: 'Notes about participant’s experience in the role. In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.',
@@ -29,7 +29,7 @@ export class ParticipantDetailComponent implements OnInit {
     {
       id: 'id3',
       year: 2011,
-      rotation: 'roationOptions2',
+      rotation: 'RT 1',
       rotation_status: 'blocked',
       manager: 'Mdo',
       note: 'Notes about participant’s experience in the role. In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris.',
@@ -63,16 +63,16 @@ export class ParticipantDetailComponent implements OnInit {
 
   roationOptions = [
     {
-      value: "roationOptions1",
-      label: "roationOptions1"
+      value: "RT 1",
+      label: "RT 1"
     },
     {
-      value: "roationOptions2",
-      label: "roationOptions2"
+      value: "RT 2",
+      label: "RT 2"
     },
     {
-      value: "roationOptions3",
-      label: "roationOptions3"
+      value: "RT 3",
+      label: "RT 3"
     },
   ]
 
