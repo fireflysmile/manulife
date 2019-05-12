@@ -42,25 +42,20 @@
                 table-layout: fixed;
                 width: 100%;
             }
-            td {
-                // width: 118px;
-            }
+        }
+
+        &-first-col {
+            padding-left: 49px;
+        }
+
+        &-last-col {
+            padding-right: 49px;
         }
 
         .history-note-row td {
             background-color: #F5F5F5;
             border-color: #F5F5F5;
         }
-
-        tr th:first-child, tr td:first-child {
-            padding-left: 49px;
-        }
-        tr th:last-child, tr td:last-child {
-            padding-right: 49px;
-        }
-
-        
-        
     }
 
     &__expanding {

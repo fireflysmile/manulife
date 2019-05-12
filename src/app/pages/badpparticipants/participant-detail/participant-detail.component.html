@@ -27,58 +27,59 @@
       <h1>Member Rotations History</h1>
     </div>
     <div class="member-rotations-history__table">
-      <table class="table">
-        <thead class="member-rotations-history__table-head">
-          <tr>
-            <th scope="col">Year</th>
-            <th scope="col">Rotation</th>
-            <th scope="col">Manager</th>
-            <th scope="col" class="text-right">
-              <button class="btn-transperant" (click)="toggleAllRotationHistoryRow()">
-                <img src="/assets/img/expand-all-icon.svg" [ngClass]="[
-                    isShowAllNotes ? 'member-rotations-history__expanding' : 'member-rotations-history__collapsing'
-                  ]" />
-              </button>
-            </th>
-          </tr>
-        </thead>
-        <tbody class="member-rotations-history__table-body">
-          <ng-container *ngFor="let history of rotationsHistory">
-            <tr>
-              <td>
-                <span *ngIf="!editMode">{{ history.year }}</span>
-                <app-dropdown *ngIf="editMode" [options]="yearOptions" [value]="getSelected(history.id)('year')"
-                  (onValueChange)="onChangeSelect(history.id)('year')($event)"></app-dropdown>
-              </td>
-              <td>
-                <span *ngIf="!editMode" [ngStyle]="stylesRotationStatus[history.rotation_status]">
-                  {{ history.rotation }}
-                </span>
-                <app-dropdown *ngIf="editMode" [options]="roationOptions" [value]="getSelected(history.id)('rotation')"
-                  (onValueChange)="onChangeSelect(history.id)('rotation')($event)"></app-dropdown>
-              </td>
-              <td>{{ history.manager }}</td>
-              <td class="text-right">
-                <button class="btn-transperant" (click)="toggleRotationHistoryRow(history.id)">
-                  <span [ngClass]="[
-                      'caret', 'caret--dark',
-                      isShowNoteById(history.id) ? 'caret--up' : 'caret--down'
-                    ]"></span>
-                </button>
-              </td>
-            </tr>
-            <tr class="history-note-row" *ngIf="isShowNoteById(history.id)">
-              <td colspan="1"></td>
-              <td colspan="3">
-                <span *ngIf="!editMode">{{ history.note }}</span>
-                <div  *ngIf="editMode" class="form-group">
-                  <textarea class="form-control rounded-0 my-textarea" rows="5">{{ history.note }}</textarea>
+      <div class="custom-table custom-table--default participant-table">
+        <div class="custom-table__thead">
+          <div class="custom-table__col member-rotations-history__table-first-col">Year</div>
+          <div class="custom-table__col">Rotation</div>
+          <div class="custom-table__col">Manager</div>
+          <div class="custom-table__col member-rotations-history__table-last-col text-right">
+            <button class="btn-transperant" (click)="toggleAllRotationHistoryRow()">
+              <img src="/assets/img/expand-all-icon.svg" [ngClass]="[
+                        isShowAllNotes ? 'member-rotations-history__expanding' : 'member-rotations-history__collapsing'
+                      ]" />
+            </button>
+          </div>
+        </div>
+        <perfect-scrollbar style="max-height: 400px;" (psYReachStart)="onScrollEvent($event)">
+          <div class="custom-table__tbody">
+            <ng-container *ngFor="let history of rotationsHistory">
+              <div class="custom-table__row custom-table__row--center member-rotations-history__table-row">
+                <div class="member-rotations-history__table-first-col custom-table__col">
+                  <span *ngIf="!editMode">{{ history.year }}</span>
+                  <app-dropdown [variant]="'transparent'" *ngIf="editMode" [options]="yearOptions" [value]="getSelected(history.id)('year')"
+                    (onValueChange)="onChangeSelect(history.id)('year')($event)"></app-dropdown>
                 </div>
-              </td>
-            </tr>
-          </ng-container>
-        </tbody>
-      </table>
+                <div class="custom-table__col">
+                  <span *ngIf="!editMode" [ngStyle]="stylesRotationStatus[history.rotation_status]">
+                    {{ history.rotation }}
+                  </span>
+                  <app-dropdown [variant]="'transparent'" *ngIf="editMode" [options]="roationOptions"
+                    [value]="getSelected(history.id)('rotation')"
+                    (onValueChange)="onChangeSelect(history.id)('rotation')($event)"></app-dropdown>
+                </div>
+                <div class="custom-table__col">{{ history.manager }}</div>
+                <div class="custom-table__col member-rotations-history__table-last-col text-right">
+                  <button class="btn-transperant" (click)="toggleRotationHistoryRow(history.id)">
+                    <span [ngClass]="[
+                            'caret', 'caret--dark',
+                            isShowNoteById(history.id) ? 'caret--up' : 'caret--down'
+                          ]"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="custom-table__row history-note-row" *ngIf="isShowNoteById(history.id)">
+                <div class="custom-table__col member-rotations-history__table-first-col"></div>
+                <div class="custom-table__col custom-table__col--3 member-rotations-history__table-last-col pl-0">
+                  <span *ngIf="!editMode">{{ history.note }}</span>
+                  <div *ngIf="editMode" class="form-group">
+                    <textarea class="form-control rounded-0 my-textarea" rows="5">{{ history.note }}</textarea>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </perfect-scrollbar>
+      </div>
     </div>
     <div class="member-rotations-history__control">
       <div class="member-rotations-history__control__left">

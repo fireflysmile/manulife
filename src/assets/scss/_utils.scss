@@ -84,6 +84,13 @@
     }
   }
 
+  &--default {
+    #{$block}__thead {
+      background: #EDEDED;
+      color: #000;
+    }
+  }
+
   &__thead {
     display: flex;
     padding: 20px 0;
@@ -96,7 +103,7 @@
     width: 100%;
 
     &:hover {
-      background: #f7f7f7;
+      background: #f3f3f3;
     }
 
     &--center {
@@ -108,5 +115,10 @@
     flex-basis: 1px;
     flex-grow: 1;
     overflow: hidden;
+    padding: 10px;
+
+    &--3 {
+      flex-grow: 3;
+    }
   }
 }
