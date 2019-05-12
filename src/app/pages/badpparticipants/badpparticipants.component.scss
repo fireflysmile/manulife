@@ -85,42 +85,6 @@
   }
 }
 
-.custom-table {
-  $block: &;
-
-  &--primary {
-    #{$block}__thead {
-      background: #0000C1;
-      color: #fff;
-    }
-  }
-
-  &__thead {
-    display: flex;
-    padding: 20px 0;
-  }
-
-  &__row {
-    border-bottom: 1px solid #E6E6E6;
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-
-    &:hover {
-      background: #f7f7f7;
-    }
-
-    &--center {
-      align-items: center;
-    }
-  }
-
-  &__col {
-    flex-basis: 1px;
-    flex-grow: 1;
-  }
-}
-
 .participant-table {
   &__row {
     cursor: pointer;
@@ -164,10 +128,10 @@
 }
 
 ::ng-deep .participant-detail {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: auto;
-  overflow: hidden;
 
   &__cover-photo {
     height: 200px;
@@ -181,13 +145,15 @@
   }
 
   &__detail {
+    flex-shrink: 0;
     padding: 24px;
   }
 
   &__info {
+    flex-basis: 1px;
+    flex-grow: 1;
     padding-bottom: 14px;
     padding-top: 22px;
-    height: 100%;
     background: #0000C1 !important;
 
     &__fullname {

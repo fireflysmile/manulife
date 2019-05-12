@@ -73,3 +73,40 @@
     font-size: 16px
   }
 }
+
+.custom-table {
+  $block: &;
+
+  &--primary {
+    #{$block}__thead {
+      background: #0000C1;
+      color: #fff;
+    }
+  }
+
+  &__thead {
+    display: flex;
+    padding: 20px 0;
+  }
+
+  &__row {
+    border-bottom: 1px solid #E6E6E6;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+
+    &:hover {
+      background: #f7f7f7;
+    }
+
+    &--center {
+      align-items: center;
+    }
+  }
+
+  &__col {
+    flex-basis: 1px;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+}
