@@ -1,0 +1,65 @@
+.caret {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: all .3s;
+  transform-origin: center;
+
+  &--dark {
+    border-color: #000;
+  }
+
+  &--down {
+    transform: rotate(45deg);
+  }
+
+  &--up {
+    transform: rotate(-135deg);
+  }
+
+  &--left {
+    transform: rotate(135deg);
+  }
+}
+
+.btn {
+  &-not-round {
+    border-radius: 0;
+  }
+
+  &-bittersweet {
+    background: #FF7769;
+    color: #fff;
+  }
+
+  &-transperant {
+    background: transparent;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer;
+  }
+}
+
+.my-form-group {
+  padding: 0px 24px;
+  margin-bottom: 19px;
+
+  > .form-control {
+    border: none;
+    background: rgba(216, 216, 216, 0.1) !important;
+    border-bottom: 2px solid #9B9B9B;
+    border-radius: 0px;
+    font-weight: 100;
+
+    &:disabled {
+      background: transparent !important;
+      border: none !important;
+      padding: 0px !important;
+    }
+  }
+
+  > label {
+    font-size: 16px
+  }
+}
