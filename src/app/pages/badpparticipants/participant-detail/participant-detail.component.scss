@@ -95,3 +95,32 @@
         }
     }
 }
+
+.participant-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    // background: rgba(0, 0, 0, 0.2);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        // background: rgba(0, 0, 0, 0.5);
+    }
+
+    color: white;
+
+    &--left {
+        left: -55px;
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    &--right {
+        right: -55px;
+    }
+}
