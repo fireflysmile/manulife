@@ -5,19 +5,20 @@
     </div>
     <div class="participant-detail__info">
       <div class="form-group my-form-group">
-        <input type="text" class="form-control participant-detail__info__fullname" id="email" value="John McKinney">
+        <input type="text" class="form-control participant-detail__info__fullname" [disabled]="!editMode" id="email"
+          value="John McKinney">
       </div>
       <div class="form-group my-form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" value="Abc@gmail.com">
+        <input type="email" class="form-control" id="email" value="Abc@gmail.com" [disabled]="!editMode">
       </div>
       <div class="form-group my-form-group">
         <label for="class_year">Class Year</label>
-        <input type="text" class="form-control" id="class_year" value="2019">
+        <input type="text" class="form-control" id="class_year" value="2019" [disabled]="!editMode">
       </div>
       <div class="form-group my-form-group">
         <label for="program">Program</label>
-        <input type="text" class="form-control" id="program" value="BADP">
+        <input type="text" class="form-control" id="program" value="BADP" [disabled]="!editMode">
       </div>
     </div>
   </div>
@@ -29,7 +30,7 @@
       <table class="table">
         <thead class="member-rotations-history__table-head">
           <tr>
-            <th scope="col" style="width: 22%">Year</th>
+            <th scope="col">Year</th>
             <th scope="col">Rotation</th>
             <th scope="col">Manager</th>
             <th scope="col" class="text-right">
@@ -41,26 +42,59 @@
             </th>
           </tr>
         </thead>
-        <tbody *ngFor="let history of rotationsHistory">
-          <tr>
-            <td>{{ history.year }}</td>
-            <td><span [ngStyle]="stylesRotationStatus[history.rotation_status]">{{ history.rotation }}</span></td>
-            <td>{{ history.manager }}</td>
-            <td class="text-right">
-              <button class="btn-transperant" (click)="toggleRotationHistoryRow(history.id)">
-                <span [ngClass]="[
-                    'caret', 'caret--dark',
-                    isShowNoteById(history.id) ? 'caret--up' : 'caret--down'
-                  ]"></span>
-              </button>
-            </td>
-          </tr>
-          <tr class="history-note-row" *ngIf="isShowNoteById(history.id)">
-            <td></td>
-            <td colspan="3">{{ history.note }}</td>
-          </tr>
+        <tbody class="member-rotations-history__table-body">
+          <ng-container *ngFor="let history of rotationsHistory">
+            <tr>
+              <td>
+                <span *ngIf="!editMode">{{ history.year }}</span>
+                <app-dropdown *ngIf="editMode" [options]="yearOptions" [value]="getSelected(history.id)('year')"
+                  (onValueChange)="onChangeSelect(history.id)('year')($event)"></app-dropdown>
+              </td>
+              <td>
+                <span *ngIf="!editMode" [ngStyle]="stylesRotationStatus[history.rotation_status]">
+                  {{ history.rotation }}
+                </span>
+                <app-dropdown *ngIf="editMode" [options]="roationOptions" [value]="getSelected(history.id)('rotation')"
+                  (onValueChange)="onChangeSelect(history.id)('rotation')($event)"></app-dropdown>
+              </td>
+              <td>{{ history.manager }}</td>
+              <td class="text-right">
+                <button class="btn-transperant" (click)="toggleRotationHistoryRow(history.id)">
+                  <span [ngClass]="[
+                      'caret', 'caret--dark',
+                      isShowNoteById(history.id) ? 'caret--up' : 'caret--down'
+                    ]"></span>
+                </button>
+              </td>
+            </tr>
+            <tr class="history-note-row" *ngIf="isShowNoteById(history.id)">
+              <td colspan="1"></td>
+              <td colspan="3">
+                <span *ngIf="!editMode">{{ history.note }}</span>
+                <div  *ngIf="editMode" class="form-group">
+                  <textarea class="form-control rounded-0" rows="5">{{ history.note }}</textarea>
+                </div>
+              </td>
+            </tr>
+          </ng-container>
         </tbody>
       </table>
+    </div>
+    <div class="member-rotations-history__control">
+      <div class="member-rotations-history__control__left">
+        <div *ngIf="editMode" class="member-rotations-history__control__button">
+          <button (click)="onClickSave()" class="btn btn-bittersweet" [disabled]="!editMode">SAVE</button>
+          <button (click)="onClickCancel()" class="btn btn-bittersweet-reverse" [disabled]="!editMode">CANCEL</button>
+        </div>
+      </div>
+      <div class="member-rotations-history__control__right">
+        <div class="member-rotations-history__control__button">
+          <button (click)="onClickEdit()" class="btn-transperant" [disabled]="editMode"><img
+              src="/assets/img/icon-pencil-edit.svg" alt=""></button>
+          <button class="btn-transperant" [disabled]="editMode"><img src="/assets/img/icon-add.svg" alt=""></button>
+          <button class="btn-transperant" [disabled]="editMode"><img src="/assets/img/icon-trash.svg" alt=""></button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
