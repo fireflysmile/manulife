@@ -63,4 +63,9 @@ export class BADPParticipantsComponent implements OnInit {
   forceCloseParticipantModal() {
     this.isOpenParticipantModal = false
   }
+
+  onScrollEvent(e) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
 }

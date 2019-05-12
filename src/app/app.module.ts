@@ -10,13 +10,21 @@ import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TestPipe } from './pipes/test.pipe';
 import { ModalComponent } from './components/modal/modal.component';
-
-
-import bootstrap from 'bootstrap';
 import { BADPParticipantsComponent } from './pages/badpparticipants/badpparticipants.component';
 import { ParticipantDetailComponent } from './pages/badpparticipants/participant-detail/participant-detail.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { AddParticipantComponent } from './pages/badpparticipants/add-participant/add-participant.component';
+
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+import bootstrap from 'bootstrap';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true,
+  wheelPropagation: true,
+};
 
 @NgModule({
   declarations: [
@@ -34,9 +42,16 @@ import { AddParticipantComponent } from './pages/badpparticipants/add-participan
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    PerfectScrollbarModule
   ],
-  providers: [DataService],
+  providers: [
+    DataService,
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
