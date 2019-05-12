@@ -4,17 +4,39 @@
 }
 
 .participant-detail {
-    flex-basis: 27.3%;
+    flex-basis: 350px;
+    flex-shrink: 0;
     &__cover-photo {
         height: 200px;
-        overflow: hidden
-        // img {
-            
-        // }
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;   
+        }
     }
 
     &__detail {
         padding: 24px;
+    }
+
+    &__info {
+        background-color: #0000C1;
+        padding-bottom: 14px;
+        padding-top: 22px;
+
+        &__fullname {
+            font-size: 40px;
+            font-weight: 100;
+        }
+
+        .my-form-group {
+            label {
+                color: #9B9B9B;
+            }
+            input {
+                color: white;
+            }
+        }
     }
 }
 
@@ -34,9 +56,14 @@
             table-layout: fixed;
         }
 
-        &-head, .history-note-row td {
+        &-head {
             background-color: #EDEDED;
             border-color: #EDEDED;
+        }
+
+        .history-note-row td {
+            background-color: #F5F5F5;
+            border-color: #F5F5F5;
         }
 
         tr th:first-child, tr td:first-child {

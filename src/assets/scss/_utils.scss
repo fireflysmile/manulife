@@ -40,3 +40,26 @@
     cursor: pointer;
   }
 }
+
+.my-form-group {
+  padding: 0px 24px;
+  margin-bottom: 19px;
+
+  > .form-control {
+    border: none;
+    background: rgba(216, 216, 216, 0.1) !important;
+    border-bottom: 2px solid #9B9B9B;
+    border-radius: 0px;
+    font-weight: 100;
+
+    &:disabled {
+      background: transparent !important;
+      border: none !important;
+      padding: 0px !important;
+    }
+  }
+
+  > label {
+    font-size: 16px
+  }
+}
